@@ -4,7 +4,7 @@
 // import User from "./Hooks/UseEffects/User";
 // import Flipkart from "./components/Flipkart";
 // import FetchAPI from "./components/FetchAPI"
-// import Registration from "./components/Registration";
+import Registration from "./components/Registration";
 import {BrowserRouter, Routes, Route} from "react-router-dom";
 import Home from "./pages/Home";
 import About from "./pages/About";
@@ -21,8 +21,9 @@ const App = () => {
 
   // const mobile = "iphone 14 pro max";
   return (
-    <div style={{ backgroundColor: "#000000", padding: "20px", textAlign: "center", fontFamily: "fantasy"  }}>
-      <h1>Welcome to App</h1>
+    <>
+      <div style={{ backgroundColor: "#000000", padding: "20px", textAlign: "center", fontFamily: "fantasy"  }}>
+        <h1>Welcome to App</h1>
 {/* 
       <hr style={{ margin: "20px 0" }} />
 
@@ -38,15 +39,17 @@ const App = () => {
       <FetchAPI/> 
       <Registration/>*/}
 
-      <BrowserRouter>
-        <NavBar />
-        <Routes>
-          <Route path="/home" element={<Home />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/contact" element={<Contact />} />
-        </Routes>
-      </BrowserRouter>
-    </div>
+        <BrowserRouter>
+          <NavBar />
+          <Routes>
+            <Route path="/home" element={<Home />} />
+            <Route path="/about" element={<About />} />
+            <Route path="/contact" element={<Contact />} />
+          </Routes>
+        </BrowserRouter>
+      </div>
+      <Registration />
+    </>
   );
 };
 
