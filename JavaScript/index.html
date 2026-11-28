@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // let emp = [
+        //     {
+        //         name : "San",
+        //         age : 20,
+        //         clg : "Sece",
+        //         company : "Anthropic",
+        //         skills : ["Javascript", "Html", "Css"]
+        //     },
+        //     {
+        //         name : "Ram",
+        //         age : 19,
+        //         clg : "Sece",
+        //         company : "Meta",
+        //         skills : ["Javascript", "Html", "Css"]
+        //     }
+        // ]
+
+        // console.log(emp[0].skills[0]);
+        // console.log(emp[1].company);
+        // console.log(emp[1].clg);
+
+        // let strdata = JSON.stringify(emp);
+        // console.log(strdata);
+
+        // let pardata = JSON.parse(strdata);
+        // console.log(pardata);
+
+
+        // let copydata = emp;
+        // copydata[0].clg = "IIT";
+        // console.log(emp[0].clg);
+        
+        let emp = {
+                name : "San",
+                age : 20,
+                clg : "Sece",
+                company : "Anthropic",
+                skills : ["Javascript", "Html", "Css"]
+            }
+
+        // //shallow copy
+        // let copydata = {...emp};
+        // copydata.clg = "IIT";
+        // console.log(emp.clg);
+        // console.log("Modified : ", copydata.clg);
+
+        //deep copy
+        let copydata = JSON.parse(JSON.stringify(emp));
+        copydata.skills[1] = "HTML";
+
+        console.log(emp.skills[1]);
+        console.log(copydata.skills[1]);
+    </script>
+</body>
+</html>
